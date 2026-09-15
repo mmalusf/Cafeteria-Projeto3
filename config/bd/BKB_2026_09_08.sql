@@ -28,7 +28,7 @@ CREATE TABLE `cliente` (
   `cpf_cliente` varchar(14) DEFAULT NULL,
   `endereco` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idCliente`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +37,7 @@ CREATE TABLE `cliente` (
 
 LOCK TABLES `cliente` WRITE;
 /*!40000 ALTER TABLE `cliente` DISABLE KEYS */;
-INSERT INTO `cliente` VALUES (3,'Maria','111.111.111-11','Av. Paraná. 234'),(4,'Lucas','222.222.222-22','Rua Arará');
+INSERT INTO `cliente` VALUES (3,'Maria','111.111.111-11','Av. Paraná. 234'),(4,'Lucas','222.222.222-22','Rua Arará'),(5,'Maria Eduarda','444.444.444.44','Rua dos Anjos'),(6,'João ','555.555.555.55','Rua das Flores');
 /*!40000 ALTER TABLE `cliente` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -209,4 +209,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-09-08 11:09:41
+-- Dump completed on 2026-09-15 11:34:17

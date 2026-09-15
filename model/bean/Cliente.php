@@ -3,7 +3,7 @@
         //Atributos
         private $IdCliente;
         private $nome_cliente;
-        private $cpf;
+        private $cpf_cliente;
         private $endereco;
 
         //Métodos de encapsulmento (getters e setters)
@@ -21,11 +21,11 @@
             $this->nome_cliente = $nome_cliente;
         }
 
-        public function getCpf(){
-            return $this->cpf;
+        public function getCpf_Cliente(){
+            return $this->cpf_cliente;
         }
-        public function setCpf($cpf){
-            $this->cpf = $cpf;
+        public function setCpf_Cliente($cpf_cliente){
+            $this->cpf_cliente = $cpf_cliente;
         }
 
 

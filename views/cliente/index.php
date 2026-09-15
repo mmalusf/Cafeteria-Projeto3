@@ -371,6 +371,9 @@
             <h1 class="h2">Gerenciamento de Clientes</h1>
             
           </div>
+          <p>
+            <a href="create.php">Novo Cliente</a>
+          </p>
           
           <div class="table-responsive small">
             <table class="table table-hover">
@@ -384,7 +387,7 @@
                     <tr>
                         <td><?= $cliente->getIDCliente() ?></td>
                         <td><?= $cliente->getNome_Cliente() ?></td>
-                        <td><?= $cliente->getCpf() ?></td>
+                        <td><?= $cliente->getCpf_cliente() ?></td>
                         <td><?= $cliente->getEndereco() ?></td>
                     </tr>
                 <?php endforeach ?>

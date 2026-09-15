@@ -15,11 +15,11 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2" href="#">
+                  <a class="nav-link d-flex align-items-center gap-2" href="../tipoproduto">
                     <svg class="bi" aria-hidden="true">
                       <use xlink:href="#file-earmark"></use>
                     </svg>
-                    Orders
+                    Tipo Produto
                   </a>
                 </li>
                 <li class="nav-item">
@@ -27,7 +27,7 @@
                     <svg class="bi" aria-hidden="true">
                       <use xlink:href="#cart"></use>
                     </svg>
-                    Products
+                    Produtos
                   </a>
                 </li>
                 <li class="nav-item">
@@ -39,19 +39,19 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2" href="#">
+                  <a class="nav-link d-flex align-items-center gap-2" href="../funcionario">
                     <svg class="bi" aria-hidden="true">
                       <use xlink:href="#graph-up"></use>
                     </svg>
-                    Reports
+                    Funcionário
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2" href="#">
+                  <a class="nav-link d-flex align-items-center gap-2" href="../formapagamento">
                     <svg class="bi" aria-hidden="true">
                       <use xlink:href="#puzzle"></use>
                     </svg>
-                    Integrations
+                    Forma de Pagamento
                   </a>
                 </li>
               </ul>

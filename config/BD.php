@@ -3,9 +3,9 @@
         public static function getConexao(){
             
             $conn = new PDO(
-                "mysql:host=localhost;port= 3306;dbname=cafeteriabd",
+                "mysql:host=localhost;dbname=cafeteriabd",
                 "root",
-                ""
+                "root"
             );
 
             return $conn;
