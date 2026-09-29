@@ -382,13 +382,18 @@
                     <th>Nome</th>
                     <th>CPF</th>
                     <th>Endereço</th>
+                    <th>Ações</th>
                 </tr>
                 <?php foreach($dao->read() as $cliente) : ?>
                     <tr>
-                        <td><?= $cliente->getIDCliente() ?></td>
+                        <td><?= $cliente->getIdCliente() ?></td>
                         <td><?= $cliente->getNome_Cliente() ?></td>
                         <td><?= $cliente->getCpf_cliente() ?></td>
                         <td><?= $cliente->getEndereco() ?></td>
+                        <td>
+                          <a href="edit.php?id=<?= $cliente->getIdCliente() ?>">Editar</a>
+                          <a href="destroy.php?id=<?= $cliente->getIdCliente() ?>">Excluir</a>
+                        </td>
                     </tr>
                 <?php endforeach ?>
             </table>
