@@ -378,10 +378,10 @@
                     <th>ID</th>
                     <th>Descrição</th>
                 </tr>
-                <?php foreach($dao->read() as $tipoProduto) : ?>
+                <?php foreach($dao->read() as $tipo_produto) : ?>
                     <tr>
-                        <td><?= $tipoProduto->getIdTipoProduto() ?></td>
-                        <td><?= $tipoProduto->getDescricao() ?></td>
+                        <td><?= $tipo_produto->getIdtipo_produto() ?></td>
+                        <td><?= $tipo_produto->getDescricao() ?></td>
                     </tr>
                 <?php endforeach ?>
             </table>
