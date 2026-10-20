@@ -71,11 +71,11 @@
 
         public function update($cliente){
             try{
-                $query = BD::getConexao()->prepare("UPDATE Cliente SET nome_cliente = :n cpf_cliente = :c endereco = :e WHERE id_cliente = i");
+                $query = BD::getConexao()->prepare("UPDATE Cliente SET nome_cliente = :n, cpf_cliente = :c, endereco = :e WHERE idCliente = :i");
                 $query->bindValue(':n', $cliente->getNome_Cliente(), PDO::PARAM_STR);
                 $query->bindValue(':c', $cliente->getCpf_Cliente(), PDO::PARAM_STR);
                 $query->bindValue(':e', $cliente->getEndereco(), PDO::PARAM_STR);
-                $query->bindValue(':i', $cliente->getID(), PDO::PARAM_INT);
+                $query->bindValue(':i', $cliente->getIdCliente(), PDO::PARAM_INT);
 
                 if(!$query->execute()) {
                     print_r($query->errorInfo());
@@ -88,7 +88,7 @@
 
         public function destroy($id){
             try{
-                $query = BD::getConexao()->prepare("DELETE FROM Cliente WHERE idCliente = i");
+                $query = BD::getConexao()->prepare("DELETE FROM Cliente WHERE idCliente = :i");
                 $query->bindValue(':i', $id, PDO::PARAM_INT);
 
                 if(!$query->execute()) {
