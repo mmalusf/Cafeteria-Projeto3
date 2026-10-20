@@ -3,7 +3,7 @@
         public function create($formaPagamento){
             try{
                 $query = BD::getConexao()->prepare("INSERT INTO FormaPagamento(nome_pagamento) VALUES (:n)");
-                $query->bindValue(':n', $formaPagamento->getNome_pagamento(), PDO::PARAM_STR);
+                $query->bindValue(':n', $formaPagamento->getNomePagamento(), PDO::PARAM_STR);
                 
                 if(!$query->execute()) {
                     print_r($query->errorInfo());
@@ -41,7 +41,7 @@
 
         public function find($id) {
             try {
-                $query = BD::getConexao()->prepare("SELECT * FROM FormaPagamento WHERE idFormaPagamneto = :i");
+                $query = BD::getConexao()->prepare("SELECT * FROM FormaPagamento WHERE idFormaPagamento = :i");
                 $query->bindValue(':i', $id, PDO::PARAM_INT); 
                 
                 if(!$query->execute()) {
@@ -50,7 +50,7 @@
 
                 if($linha = $query->fetch(PDO::FETCH_ASSOC)) {
                     $formaPagamento = new FormaPagamento(); //Classe bean
-                    $formaPagamento->setIdFormaPagamento($linha['idformapagamento']);
+                    $formaPagamento->setIdFormaPagamento($linha['idFormaPagamento']);
                     $formaPagamento->setNomePagamento($linha['nome_pagamento']);
                 }
 

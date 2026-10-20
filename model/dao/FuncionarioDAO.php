@@ -2,8 +2,8 @@
     class FuncionarioDAO{
         public function create($funcionario){
             try{
-                $query = BD::getConexao()->prepare("INSERT INTO Funcionario(nome_funcionario) VALUES (:n)");
-                $query->bindValue(':n', $funcionario->getNome_Cliente(), PDO::PARAM_STR);
+                $query = BD::getConexao()->prepare("INSERT INTO Funcionario(nomefuncionario) VALUES (:n)");
+                $query->bindValue(':n', $funcionario->getNomeFuncionario(), PDO::PARAM_STR);
 
                 if(!$query->execute()) {
                     print_r($query->errorInfo());
@@ -49,8 +49,8 @@
 
                 if($linha = $query->fetch(PDO::FETCH_ASSOC)) {
                     $funcionario = new Funcionario(); //Classe bean
-                    $funcionario->setIdFuncionario($linha['idCliente']);
-                    $funcionario->setNomeFuncionario($linha['nome_cliente']);
+                    $funcionario->setIdFuncionario($linha['idFuncionario']);
+                    $funcionario->setNomeFuncionario($linha['nome_funcionario']);
                 }
 
                 return $funcionario;
