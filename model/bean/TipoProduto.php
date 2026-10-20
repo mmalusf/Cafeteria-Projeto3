@@ -1,15 +1,15 @@
 <?php
     class TipoProduto{
         //Atributos
-        private $idTipoProduto;
+        private $tipo_produto;
         private $descricao;
 
         //Métodos de encapsulamento
-        public function getIdTipoProduto(){
-            return $this->idTipoProduto;
+        public function getIdtipo_produto(){
+            return $this->tipo_produto;
         }
-        public function setIdTipoProduto($idTipoProduto){
-            $this->idTipoProduto = $idTipoProduto;
+        public function setIdtipo_produto($tipo_produto){
+            $this->tipo_produto = $tipo_produto;
         }
 
         public function getdescricao(){
