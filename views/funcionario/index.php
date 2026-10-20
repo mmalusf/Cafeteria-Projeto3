@@ -3,7 +3,7 @@
    require "../../autoload.php";
 
    //Instanciar um objeto da classe DAO 
-   $dao = new FuncionarioDAO();
+   $dao = new funcionarioDAO();
 ?>
 
 
@@ -25,6 +25,7 @@
     />
     <script src="../../js/color-modes.js"></script>
     <link href="../../css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <meta name="theme-color" content="#712cf9" />
     <link href="../../css/dashboard.css" rel="stylesheet" />
     <style>
@@ -368,20 +369,29 @@
           <div
             class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
           >
-            <h1 class="h2">Gerenciamento de Funcionários</h1>
+            <h1 class="h2">Gerenciamento de Funcionarios</h1>
             
           </div>
+          <p>
+            <a href="create.php">Novo Funcionario</a>
+          </p>
           
           <div class="table-responsive small">
             <table class="table table-hover">
                 <tr>
                     <th>ID</th>
                     <th>Nome</th>
+                    <th>Ações</th>
                 </tr>
                 <?php foreach($dao->read() as $funcionario) : ?>
                     <tr>
                         <td><?= $funcionario->getIdFuncionario() ?></td>
                         <td><?= $funcionario->getNomeFuncionario() ?></td>
+                        
+                        <td>
+                          <a title="Editar" href="edit.php?id=<?= $funcionario->getIdfuncionario() ?>"><i class="bi bi-pencil-fill"></i></a>
+                          <a title="Excluir" class="link-danger" href="destroy.php?id=<?= $funcionario->getIdfuncionario() ?>"><i class="bi bi-trash3-fill"></i></a>
+                        </td>
                     </tr>
                 <?php endforeach ?>
             </table>
