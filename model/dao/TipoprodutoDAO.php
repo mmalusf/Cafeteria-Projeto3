@@ -2,7 +2,7 @@
     class TipoprodutoDAO{
         public function create($tipo_produto){
             try{
-                $query = BD::getConexao()->prepare("INSERT INTO tipo_produto(decricao) VALUES (:d)");
+                $query = BD::getConexao()->prepare("INSERT INTO tipo_produto(descricao) VALUES (:d)");
                 $query->bindValue(':d', $tipo_produto->getDescricao(), PDO::PARAM_STR);
 
                 if(!$query->execute()) {

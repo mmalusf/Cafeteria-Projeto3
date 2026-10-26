@@ -2,7 +2,7 @@
     class FuncionarioDAO{
         public function create($funcionario){
             try{
-                $query = BD::getConexao()->prepare("INSERT INTO Funcionario(nomefuncionario) VALUES (:n)");
+                $query = BD::getConexao()->prepare("INSERT INTO Funcionario(nome_funcionario) VALUES (:n)");
                 $query->bindValue(':n', $funcionario->getNomeFuncionario(), PDO::PARAM_STR);
 
                 if(!$query->execute()) {
