@@ -374,10 +374,10 @@
             <form action="update.php" method="post">
                 <div class="form-group">
                     <label for="nome">Nome</label>
-                    <input type="text" name="nomefuncionario" value="<?= $funcionario->getNomeFuncionario() ?>" class="form-control">
+                    <input type="text" name="nome_funcionario" value="<?= $funcionario->getNomeFuncionario() ?>" class="form-control">
                 </div>
 
-                <input type= "hidden" name="IdCliente" value="<?= $funcionario->getIdFuncionario() ?>">
+                <input type= "hidden" name="idFuncionario" value="<?= $funcionario->getIdFuncionario() ?>">
 
                 <div class="form-group">
                     <input type="reset" value="Limpar" class="btn">

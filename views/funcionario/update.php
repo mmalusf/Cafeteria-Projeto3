@@ -5,8 +5,8 @@
     $funcionario = new Funcionario();
 
     //Definir os valores dps atributos a partir dos dados do form
-    $funcionario->setNomeFuncionario($_POST['nomefuncionario']);
-    $funcionario->setIdFuncionario($_POST['IdFuncionario']);
+    $funcionario->setNomeFuncionario($_POST['nome_funcionario']);
+    $funcionario->setIdFuncionario($_POST['idFuncionario']);
 
     //Instanciar um objeto da classe ClienteDAO
     $dao = new FuncionarioDAO();
