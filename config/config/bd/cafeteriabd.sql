@@ -1,0 +1,1 @@
+SELECT * FROM cafeteriabd.tipo_produto;
