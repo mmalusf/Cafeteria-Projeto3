@@ -6,7 +6,7 @@
 
     //Definir os valores dps atributos a partir dos dados do form
     $tipo_produto->setIdtipo_produto($_POST['idtipo_produto']);
-    $tipo_produto->setIdCliente($_POST['IdCliente']);
+    $tipo_produto->setDescricao($_POST['descricao']);
 
     //Instanciar um objeto da classe ClienteDAO
     $dao = new TipoProdutoDAO();

@@ -377,7 +377,7 @@
                     <input type="text" name="descricao" value="<?= $tipo_produto->getDescricao() ?>" class="form-control">
                 </div>
 
-                <input type= "hidden" name="IdTipoProduto" value="<?= $tipo_produto->getIdtipo_produto() ?>">
+                <input type= "hidden" name="idtipo_produto" value="<?= $tipo_produto->getIdtipo_produto() ?>">
 
                 <div class="form-group">
                     <input type="reset" value="Limpar" class="btn">
