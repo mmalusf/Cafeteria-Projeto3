@@ -1,8 +1,8 @@
 <?php
     require "../../autoload.php";
 
-    $dao = new TipoProdutoDAO();
-    $tipo_produto = $dao->find($_GET['id']);
+    $dao = new ProdutoDAO();
+    $produto = $dao->find($_GET['id']);
 ?>
 
 <!doctype html>

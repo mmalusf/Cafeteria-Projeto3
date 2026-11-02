@@ -1,7 +1,7 @@
 <?php
     require "../../autoload.php";
 
-    $daoTipo_produto = new TipoProdutoDAO();
+    $daoproduto = new ProdutoDAO();
 ?>
 
 <!doctype html>
