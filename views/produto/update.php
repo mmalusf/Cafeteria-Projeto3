@@ -2,17 +2,18 @@
     require "../../autoload.php";
 
     //Instanciar um objeto da classe cliente (bean)
-    $tipo_produto = new TipoProduto();
+    $produto = new Produto();
 
     //Definir os valores dps atributos a partir dos dados do form
-    $tipo_produto->setIdtipo_produto($_POST['idtipo_produto']);
-    $tipo_produto->setDescricao($_POST['descricao']);
+    $produto->setIdProduto($_POST['idproduto']);
+    $produto->setNome_produto($_POST['nome_produto']);
+    $produto->setPreco_produto($_POST['preco_produto']);
 
     //Instanciar um objeto da classe ClienteDAO
-    $dao = new TipoProdutoDAO();
+    $dao = new ProdutoDAO();
 
     //Invocar o método update da classe ClienteDAO
-    $dao->update($tipo_produto);
+    $dao->update($produto);
 
     //Redirecionar para o index
     header('Location: index.php');

@@ -1,7 +1,7 @@
 <?php
     require "../../autoload.php";
 
-    $daoproduto = new ProdutoDAO();
+    $daoTipo_produto = new TipoProdutoDAO();
 ?>
 
 <!doctype html>
@@ -381,9 +381,9 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="idtipo_produto">Descrição</label>
+                    <label for="idtipo_produto">Tipo de Produto</label>
                     <select name="idtipo_produto" class="form-control">
-                        <?php foreach($daoTipo_produto as $tipo_produto) : ?>
+                        <?php foreach($daoTipo_produto->read() as $tipo_produto) : ?>
                             <option value="<?= $tipo_produto->getIdtipo_produto() ?>"><?= $tipo_produto->getDescricao() ?></option>
                         <?php endforeach ?>
                     </select>

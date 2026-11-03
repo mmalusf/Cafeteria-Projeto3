@@ -382,7 +382,7 @@
                     <th>ID</th>
                     <th>Nome Produto</th>
                     <th>Preço Produto</th>
-                    <th>Tipo Produto</th>
+                    <th>Descrição</th>
                     <th>Ações</th>
                 </tr>
                 <?php foreach($dao->read() as $produto) : ?>
