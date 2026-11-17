@@ -359,7 +359,7 @@
           <div
             class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
           >
-            <h1 class="h2">Cadastrar Funcionario</h1>
+            <h1 class="h2">Cadastrar Funcionário</h1>
             
           </div>
           
@@ -367,7 +367,7 @@
             <form action="insert.php" method="post">
                 <div class="form-group">
                     <label for="nome">Nome</label>
-                    <input type="text" name="nomefuncionario" class="form-control">
+                    <input type="text" name="nome_funcionario" class="form-control">
                 </div>
                 <div class="form-group">
                     <input type="reset" value="Limpar" class="btn">

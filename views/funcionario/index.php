@@ -3,7 +3,7 @@
    require "../../autoload.php";
 
    //Instanciar um objeto da classe DAO 
-   $dao = new funcionarioDAO();
+   $dao = new FuncionarioDAO();
 ?>
 
 
@@ -369,11 +369,11 @@
           <div
             class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
           >
-            <h1 class="h2">Gerenciamento de Funcionarios</h1>
+            <h1 class="h2">Gerenciamento de Funcionários</h1>
             
           </div>
           <p>
-            <a href="create.php">Novo Funcionario</a>
+            <a href="create.php">Novo Funcionário</a>
           </p>
           
           <div class="table-responsive small">
@@ -389,8 +389,8 @@
                         <td><?= $funcionario->getNomeFuncionario() ?></td>
                         
                         <td>
-                          <a title="Editar" href="edit.php?id=<?= $funcionario->getIdfuncionario() ?>"><i class="bi bi-pencil-fill"></i></a>
-                          <a title="Excluir" class="link-danger" href="destroy.php?id=<?= $funcionario->getIdfuncionario() ?>"><i class="bi bi-trash3-fill"></i></a>
+                          <a title="Editar" href="edit.php?id=<?= $funcionario->getIdFuncionario() ?>"><i class="bi bi-pencil-fill"></i></a>
+                          <a title="Excluir" class="link-danger" href="destroy.php?id=<?= $funcionario->getIdFuncionario() ?>"><i class="bi bi-trash3-fill"></i></a>
                         </td>
                     </tr>
                 <?php endforeach ?>
