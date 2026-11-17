@@ -1,8 +1,10 @@
 <?php
     require "../../autoload.php";
 
-    $dao = new TipoProdutoDAO();
-    $tipo_produto = $dao->find($_GET['id']);
+    $dao = new ProdutoDAO();
+    $produto = $dao->find($_GET['id']);
+
+    $daoTipo_produto = new TipoProdutoDAO();
 ?>
 
 <!doctype html>
@@ -16,7 +18,7 @@
       content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
     />
     <meta name="generator" content="Astro v5.13.2" />
-    <title>Dashboard Template · Bootstrap v5.3</title>
+    <title>Editar Produto</title>
     <link
       rel="canonical"
       href="https://getbootstrap.com/docs/5.3/examples/dashboard/"
@@ -366,18 +368,40 @@
           <div
             class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
           >
-            <h1 class="h2">Cadastrar Descrição</h1>
+            <h1 class="h2">Editar Produto</h1>
             
           </div>
           
           <div class="table-responsive small">
             <form action="update.php" method="post">
-                <div class="form-group">
-                    <label for="nome">Descrição</label>
-                    <input type="text" name="descricao" value="<?= $tipo_produto->getDescricao() ?>" class="form-control">
+              <div class="form-group">
+                    <label for="nome">Nome do Produto</label>
+                    <input type="text" name="nome_produto" value="<?= $produto->getNome_produto() ?>" class="form-control">
                 </div>
 
-                <input type= "hidden" name="idtipo_produto" value="<?= $tipo_produto->getIdtipo_produto() ?>">
+                <div class="form-group">
+                    <label for="nome">Preço do Produto</label>
+                    <input type="text" name="preco_produto" value="<?= $produto->getPreco_produto() ?>" class="form-control">
+                </div>
+
+                <div class="form-group">
+                  <label for="idtipo_produto">Descrição</label>
+                  <select name="idtipo_produto" class="form-control">
+                    <?php foreach($daoTipo_produto->read() as $descricao) : ?>
+                      <?php if($descricao->getIdtipo_produto() == $produto->getIdtipo_produto()->getDescricao()) : ?>
+                        <option selected value="<?= $descricao->getIdtipo_produto() ?>">
+                          <?= $descricao->getDescricao() ?>
+                        </option>
+                      <?php else : ?>
+                        <option value="<?= $descricao->getIdtipo_produto() ?>">
+                          <?= $descricao->getDescricao() ?>
+                        </option>
+                      <?php endif ?>
+                    <?php endforeach ?>
+                  </select>
+                </div>
+
+                <input type= "hidden" name="idProduto" value="<?= $produto->getIdproduto() ?>">
 
                 <div class="form-group">
                     <input type="reset" value="Limpar" class="btn">

@@ -6,7 +6,6 @@
     $produto = new Produto();
 
     //Definir os valores dos atributos a partir do form
-    $produto->setIdProduto($_POST['idProduto']);
     $produto->setNome_produto($_POST['nome_produto']);
     $produto->setPreco_produto($_POST['preco_produto']);
 

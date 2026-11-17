@@ -15,7 +15,7 @@
       content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
     />
     <meta name="generator" content="Astro v5.13.2" />
-    <title>Dashboard Template · Bootstrap v5.3</title>
+    <title>Cadastrar Produto</title>
     <link
       rel="canonical"
       href="https://getbootstrap.com/docs/5.3/examples/dashboard/"
@@ -365,7 +365,7 @@
           <div
             class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
           >
-            <h1 class="h2">Cadastrar Produtos</h1>
+            <h1 class="h2">Cadastrar Produto</h1>
             
           </div>
           
