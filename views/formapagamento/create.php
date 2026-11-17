@@ -367,8 +367,7 @@
             <form action="insert.php" method="post">
                 <div class="form-group">
                     <label for="nome">Nome</label>
-                    <input type="text" name="nomepagamento" class="form-control">
-                </div>
+                    <input type="text" name="nome_pagamento" class="form-control">
                 </div>
                 <div class="form-group">
                     <input type="reset" value="Limpar" class="btn">

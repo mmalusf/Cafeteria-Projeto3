@@ -18,13 +18,14 @@
       content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
     />
     <meta name="generator" content="Astro v5.13.2" />
-    <title>Dashboard Template · Bootstrap v5.3</title>
+    <title>Gerenciamento de Formas de Pagamento</title>
     <link
       rel="canonical"
       href="https://getbootstrap.com/docs/5.3/examples/dashboard/"
     />
     <script src="../../js/color-modes.js"></script>
     <link href="../../css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <meta name="theme-color" content="#712cf9" />
     <link href="../../css/dashboard.css" rel="stylesheet" />
     <style>
@@ -371,17 +372,25 @@
             <h1 class="h2">Gerenciamento de Formas de Pagamento</h1>
             
           </div>
+          <p>
+            <a href="create.php">Nova Forma de Pagamento</a>
+          </p>
           
           <div class="table-responsive small">
             <table class="table table-hover">
                 <tr>
                     <th>ID</th>
                     <th>Nome</th>
+                    <th>Ações</th>
                 </tr>
                 <?php foreach($dao->read() as $formaPagamento) : ?>
                     <tr>
                         <td><?= $formaPagamento->getIdFormaPagamento() ?></td>
                         <td><?= $formaPagamento->getNomePagamento() ?></td>
+                        <td>
+                          <a title="Editar" href="edit.php?id=<?= $formaPagamento->getIdFormaPagamento() ?>"><i class="bi bi-pencil-fill"></i></a>
+                          <a title="Excluir" class="link-danger" href="destroy.php?id=<?= $formaPagamento->getIdFormaPagamento() ?>"><i class="bi bi-trash3-fill"></i></a>
+                        </td>
                     </tr>
                 <?php endforeach ?>
             </table>

@@ -6,7 +6,7 @@
     $formaPagamento = new FormaPagamento();
 
     //Definir os valores dos atributos a partir do form
-    $formaPagamento->setNomePagamento($_POST['nomepagamento']);;
+    $formaPagamento->setNomePagamento($_POST['nome_pagamento']);
 
     //Instanciar um objeto da classe formaPagamento DAO 
     $dao = new FormaPagamentoDAO();
