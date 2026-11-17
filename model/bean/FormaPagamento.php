@@ -2,7 +2,7 @@
     class FormaPagamento{
         //Atributos
         private $idFormaPagamento;
-        private $nomePagamento;
+        private $nome_pagamento;
 
         //Métodos de encapsulamento
         public function getIdFormaPagamento(){
@@ -13,9 +13,9 @@
         }
 
         public function getNomePagamento(){
-            return $this->nomePagamento;
+            return $this->nome_pagamento;
         }
-        public function setNomePagamento($nomePagamento){
-            $this->nomePagamento = $nomePagamento;
+        public function setNomePagamento($nome_pagamento){
+            $this->nome_pagamento = $nome_pagamento;
         }
     }

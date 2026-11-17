@@ -1,17 +1,17 @@
 <?php
     class Cliente{
         //Atributos
-        private $IdCliente;
+        private $idCliente;
         private $nome_cliente;
         private $cpf_cliente;
         private $endereco;
 
         //Métodos de encapsulmento (getters e setters)
         public function getIdCliente(){
-            return $this->IdCliente;
+            return $this->idCliente;
         }
         public function setIdCliente($idCliente){
-            $this->IdCliente = $idCliente;
+            $this->idCliente = $idCliente;
         }
 
         public function getNome_Cliente(){

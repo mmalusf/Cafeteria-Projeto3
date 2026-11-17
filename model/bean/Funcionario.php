@@ -2,7 +2,7 @@
     class Funcionario{
         //Atributos
         private $idFuncionario;
-        private $nomeFuncionario;
+        private $nome_funcionario;
 
         //Métodos de encapsulamento
         public function getIdFuncionario(){
@@ -13,10 +13,10 @@
         }
 
         public function getNomeFuncionario(){
-            return $this->nomeFuncionario;
+            return $this->nome_funcionario;
         }
-        public function setNomeFuncionario($nomeFuncionario){
-            $this->nomeFuncionario = $nomeFuncionario;
+        public function setNomeFuncionario($nome_funcionario){
+            $this->nome_funcionario = $nome_funcionario;
         }
     }
 ?>

@@ -1,5 +1,5 @@
 <?php
-    class Funcionario{
+    class Produto{
         //Atributos
         private $idProduto;
         private $nome_produto;
