@@ -2,14 +2,14 @@
     //Incluir o arquivo de autoload
     require "../../autoload.php";
 
-    //Instanciar um objeto da classe cliente (bean)
+    //Instanciar um objeto da classe tipoProduto (bean)
     $tipo_produto = new TipoProduto();
 
     //Definir os valores dos atributos a partir do form
     $tipo_produto->setIdtipo_produto($_POST['idtipo_produto']);
     $tipo_produto->setDescricao($_POST['descricao']);
 
-    //Instanciar um objeto da classe cliente DAO 
+    //Instanciar um objeto da classe tipoProduto DAO 
     $dao = new TipoProdutoDAO();
 
     //Invocar o método create

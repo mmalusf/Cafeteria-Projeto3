@@ -4,7 +4,7 @@
     //Coletar valor do id pela URL
     $id = $_GET['id'];
 
-    //Instanciar um objeto da classe ClienteDAo
+    //Instanciar um objeto da classe TipoProdutoDAO
     $dao = new TipoProdutoDAO();
 
     //Invocar o método para excluir
