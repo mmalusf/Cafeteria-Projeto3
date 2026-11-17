@@ -18,13 +18,14 @@
       content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
     />
     <meta name="generator" content="Astro v5.13.2" />
-    <title>Dashboard Template · Bootstrap v5.3</title>
+    <title>Gerenciamento de Clientes</title>
     <link
       rel="canonical"
       href="https://getbootstrap.com/docs/5.3/examples/dashboard/"
     />
     <script src="../../js/color-modes.js"></script>
     <link href="../../css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <meta name="theme-color" content="#712cf9" />
     <link href="../../css/dashboard.css" rel="stylesheet" />
     <style>
@@ -388,11 +389,11 @@
                     <tr>
                         <td><?= $cliente->getIdCliente() ?></td>
                         <td><?= $cliente->getNome_Cliente() ?></td>
-                        <td><?= $cliente->getCpf_cliente() ?></td>
+                        <td><?= $cliente->getCpf_Cliente() ?></td>
                         <td><?= $cliente->getEndereco() ?></td>
                         <td>
-                          <a href="edit.php?id=<?= $cliente->getIdCliente() ?>">Editar</a>
-                          <a href="destroy.php?id=<?= $cliente->getIdCliente() ?>">Excluir</a>
+                          <a title="Editar" href="edit.php?id=<?= $cliente->getIdCliente() ?>"><i class="bi bi-pencil-fill"></i></a>
+                          <a title="Excluir" class="link-danger" href="destroy.php?id=<?= $cliente->getIdCliente() ?>"><i class="bi bi-trash3-fill"></i></a>
                         </td>
                     </tr>
                 <?php endforeach ?>

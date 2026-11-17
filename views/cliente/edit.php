@@ -366,7 +366,7 @@
           <div
             class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
           >
-            <h1 class="h2">Cadastrar Clientes</h1>
+            <h1 class="h2">Editar Clientes</h1>
             
           </div>
           
@@ -385,7 +385,7 @@
                     <input type="text" name="endereco" value="<?= $cliente->getEndereco() ?>" class="form-control">
                 </div>
 
-                <input type= "hidden" name="IdCliente" value="<?= $cliente->getIdCliente() ?>">
+                <input type= "hidden" name="idCliente" value="<?= $cliente->getIdCliente() ?>">
 
                 <div class="form-group">
                     <input type="reset" value="Limpar" class="btn">
