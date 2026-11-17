@@ -1,5 +1,5 @@
 <?php 
-    class TipoprodutoDAO{
+    class TipoProdutoDAO{
         public function create($tipo_produto){
             try{
                 $query = BD::getConexao()->prepare("INSERT INTO tipo_produto(descricao) VALUES (:d)");
@@ -22,16 +22,16 @@
                     print_r($query->errorInfo());
                 }
 
-                $listaTipoprodutos = array();
+                $listaTipoProdutos = array();
                 foreach($query->fetchALL(PDO::FETCH_ASSOC) as $linha) {
                     $tipo_produto = new TipoProduto(); //Classe bean
                     $tipo_produto->setIdtipo_produto($linha['idtipo_produto']);
                     $tipo_produto->setDescricao($linha['descricao']);
 
-                    array_push($listaTipoprodutos, $tipo_produto);
+                    array_push($listaTipoProdutos, $tipo_produto);
                 }
 
-                return $listaTipoprodutos;
+                return $listaTipoProdutos;
 
             }
             catch(PDOException $e){
@@ -49,12 +49,14 @@
                 }
 
                 if($linha = $query->fetch(PDO::FETCH_ASSOC)) {
-                    $tipo_produto = new Tipoproduto(); //Classe bean
+                    $tipo_produto = new TipoProduto(); //Classe bean
                     $tipo_produto->setIdtipo_produto($linha['idtipo_produto']);
                     $tipo_produto->setDescricao($linha['descricao']);
+
+                    return $tipo_produto;
                 }
 
-                return $tipo_produto;
+                
 
             }
             catch(PDOException $e){

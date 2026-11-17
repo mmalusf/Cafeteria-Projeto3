@@ -28,10 +28,10 @@
                 $listaProdutos = array();
                 foreach($query->fetchALL(PDO::FETCH_ASSOC) as $linha) {
                     $produto = new Produto(); //Classe bean
-                    $produto->setIdProduto($linha['idproduto']);
+                    $produto->setIdProduto($linha['idProduto']);
                     $produto->setNome_produto($linha['nome_produto']);
                     $produto->setPreco_produto($linha['preco_produto']);
-                    //Atributo da associação (com Tipo Produto)
+                     //Atributo da associação (com Tipo Produto)
                     $daoTipo_produto = new TipoProdutoDAO();
                     $tipo_produto = $daoTipo_produto->find($linha['idtipo_produto']);
                     $produto->setIdtipo_produto($tipo_produto);
@@ -57,10 +57,14 @@
                 }
 
                 if($linha = $query->fetch(PDO::FETCH_ASSOC)) {
-                    $produto = new Tipoproduto(); //Classe bean
-                    $produto->setIdproduto($linha['idproduto']);
+                    $produto = new Produto(); //Classe bean
+                    $produto->setIdProduto($linha['idProduto']);
                     $produto->setNome_produto($linha['nome_produto']);
                     $produto->setPreco_produto($linha['preco_produto']);
+                    //Atributo da associação (com Tipo Produto)
+                    $daoTipo_produto = new TipoProdutoDAO();
+                    $tipo_produto = $daoTipo_produto->find($linha['idtipo_produto']);
+                    $produto->setIdtipo_produto($tipo_produto);
                 }
 
                 return $produto;
@@ -73,9 +77,11 @@
 
          public function update($produto){
             try{
-                $query = BD::getConexao()->prepare("UPDATE produto SET nome_produto = :n WHERE idproduto = :i");
+                $query = BD::getConexao()->prepare("UPDATE produto SET nome_produto = :n, preco_produto = :p, idtipo_produto = :t WHERE idproduto = :i");
                 $query->bindValue(':n', $produto->getNome_produto(), PDO::PARAM_STR);
-                $query->bindValue(':i', $produto->getIdproduto(), PDO::PARAM_INT);
+                $query->bindValue(':p', $produto->getPreco_produto(), PDO::PARAM_INT);
+                $query->bindValue(':t', $produto->getIdtipo_produto()->getIdtipo_produto(), PDO::PARAM_INT);
+                $query->bindValue(':i', $produto->getIdProduto(), PDO::PARAM_INT);
 
                 if(!$query->execute()) {
                     print_r($query->errorInfo());
