@@ -6,7 +6,6 @@
     $clienteDAO = new ClienteDAO();
     $funcionarioDAO = new FuncionarioDAO();
     $formaPagamentoDAO = new FormaPagamentoDAO();
-    $produtoDAO = new ProdutoDAO();
     ?>
 
 <!doctype html>
@@ -29,6 +28,7 @@
     <link href="../../css/bootstrap.min.css" rel="stylesheet" />
     <meta name="theme-color" content="#712cf9" />
     <link href="../../css/dashboard.css" rel="stylesheet" />
+    <link href="../../css/style.css" rel="stylesheet" />
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -420,27 +420,7 @@
                     </select>
                 </div>
 
-                <h5>Produtos do pedido</h5>
-
-                <?php foreach($produtoDAO->read() as $produto) : ?>
-                    <div class="row mb-3 align-items-center">
-                        <div class="col-md-8">
-                            <label>
-                                <?= $produto->getNome_produto() ?>
-                            </label>
-                        </div>
-
-                        <div class="col-md-4">
-                          <input
-                            type="number"
-                            name="produtos[<?= $produto->getIdProduto() ?>]"
-                            class="form-control"
-                            placeholder="Quantidade"
-                            min="0"
-                         >
-                        </div>
-                    </div>
-                <?php endforeach ?>
+          
 
                <button type="submit" class="btn btn-primary">Cadastrar Pedido</button>
                <a href="index.php" class="btn btn-secondary">Voltar</a>

@@ -11,8 +11,6 @@
     $pedido->setIdFuncionario($_POST['idFuncionario']);
     $pedido->setIdFormaPagamento($_POST['idFormaPagamento']);
 
-    $produtos = array();
-
     //Instanciar um objeto da classe cliente DAO 
     $dao = new PedidoDAO();
 

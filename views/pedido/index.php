@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <meta name="theme-color" content="#712cf9" />
     <link href="../../css/dashboard.css" rel="stylesheet" />
+    <link href="../../css/style.css" rel="stylesheet" />
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -397,6 +398,7 @@
                         <td>
                           <a title="Editar" href="edit.php?id=<?= $pedido->getIdPedido() ?>"><i class="bi bi-pencil-fill"></i></a>
                           <a title="Excluir" class="link-danger" href="destroy.php?id=<?= $pedido->getIdPedido() ?>"><i class="bi bi-trash3-fill"></i></a>
+                          <a title="Adicionar" href="produtos.php?id=<?= $pedido->getIdPedido() ?>"><i class="bi bi-plus-circle"></i></a>
                         </td>
                     </tr>
                 <?php endforeach ?>
