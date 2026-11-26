@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <meta name="theme-color" content="#712cf9" />
     <link href="../../css/dashboard.css" rel="stylesheet" />
+    <link href="../../css/style.css" rel="stylesheet" />
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -373,7 +374,9 @@
             
           </div>
           <p>
-            <a href="create.php">Novo Produto</a>
+            <a href="create.php" class="btn btn-primary">
+              <i class="bi bi-plus-circle"></i> Novo Produto
+            </a>
           </p>
           
           <div class="table-responsive small">
@@ -382,7 +385,7 @@
                     <th>ID</th>
                     <th>Nome Produto</th>
                     <th>Preço Produto</th>
-                    <th>Descrição</th>
+                    <th>Tipo Produto</th>
                     <th>Ações</th>
                 </tr>
                 <?php foreach($dao->read() as $produto) : ?>
