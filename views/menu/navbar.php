@@ -34,6 +34,14 @@
                     Produtos
                   </a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex align-items-center gap-2" href="/cafeterias/views/produto_has_pedido/">
+                    <svg class="bi" aria-hidden="true">
+                      <use xlink:href="#file-earmark-text"></use>
+                    </svg>
+                    Registros
+                  </a>
+                </li>
                 
               </ul>
               <h6
