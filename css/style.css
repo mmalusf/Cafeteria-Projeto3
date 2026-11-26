@@ -1,0 +1,318 @@
+
+/* =================================
+   IDENTIDADE VISUAL - CAFETERIA
+================================= */
+
+:root {
+    --creme: #F8F1E7;
+    --terracota: #C96F4A;
+    --cafe: #8A573D;
+    --mostarda: #D9A441;
+    --verde: #819477;
+    --texto: #49372D;
+    --branco: #FFFFFF;
+}
+
+/* Configuração geral */
+
+body {
+    background-color: var(--creme);
+    color: var(--texto);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Títulos */
+
+h1, h2, h3 {
+    color: var(--cafe);
+    font-weight: 700;
+}
+
+/* Botões */
+
+.btn-primary {
+    background-color: var(--terracota);
+    border-color: var(--terracota);
+    color: var(--branco);
+    border-radius: 10px;
+}
+
+.btn-primary:hover {
+    background-color: var(--cafe);
+    border-color: var(--cafe);
+}
+
+.btn-success {
+    background-color: var(--verde);
+    border-color: var(--verde);
+    border-radius: 10px;
+}
+
+/* Tabelas */
+
+.table {
+    background-color: var(--branco);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table th {
+    background-color: var(--cafe);
+    color: var(--branco);
+    border: none;
+}
+
+/* Formulários */
+
+.form-control,
+.form-select {
+    border-radius: 9px;
+    border: 1px solid #DDC9B8;
+    padding: 10px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--terracota);
+    box-shadow: 0 0 0 0.2rem rgba(201, 111, 74, 0.20);
+}
+
+/* Cartões */
+
+.card {
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(73, 55, 45, 0.08);
+}
+/* Botão de editar */
+.btn-warning {
+    background-color: var(--mostarda);
+    border-color: var(--mostarda);
+    color: var(--texto);
+    border-radius: 8px;
+}
+
+.btn-warning:hover {
+    background-color: #C18F2E;
+    border-color: #C18F2E;
+    color: var(--branco);
+}
+
+/* Botão de excluir */
+.btn-danger {
+    background-color: var(--terracota);
+    border-color: var(--terracota);
+    border-radius: 8px;
+}
+
+.btn-danger:hover {
+    background-color: var(--cafe);
+    border-color: var(--cafe);
+}
+/* Cabeçalho superior */
+header.navbar {
+    background-color: var(--cafe) !important;
+}
+
+header.navbar .navbar-brand {
+    color: var(--branco) !important;
+    font-weight: 700;
+}
+/* Menu lateral */
+.sidebar,
+.sidebar .offcanvas-body {
+    background-color: #EFE2D2 !important;
+}
+
+/* Links do menu */
+.sidebar .nav-link {
+    color: var(--texto);
+    font-weight: 500;
+    padding: 10px 16px;
+    margin: 3px 10px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+/* Efeito ao passar o mouse */
+.sidebar .nav-link:hover {
+    background-color: #E2CEB9;
+    color: var(--cafe);
+}
+
+/* Link selecionado */
+.sidebar .nav-link.active {
+    background-color: var(--terracota);
+    color: var(--branco);
+}
+
+/* Ícones */
+.sidebar .nav-link svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Títulos das seções */
+.sidebar .sidebar-heading {
+    color: var(--cafe) !important;
+    font-weight: 700;
+}
+/* Linhas da tabela */
+.table td {
+    color: var(--texto);
+    vertical-align: middle;
+    padding: 12px;
+}
+
+/* Efeito ao passar o mouse */
+.table-hover tbody tr:hover {
+    background-color: #F3E5D5;
+}
+
+/* Espaçamento da tabela */
+.table {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(73, 55, 45, 0.08);
+}
+/* Espaçamento dos formulários */
+form {
+    margin-top: 15px;
+}
+
+form label {
+    color: var(--cafe);
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+/* Espaçamento entre os campos */
+form .form-group {
+    margin-bottom: 18px;
+}
+
+/* Botão de limpar */
+form .btn[type="reset"] {
+    background-color: #E2CEB9;
+    color: var(--texto);
+    border-radius: 8px;
+}
+
+/* Botão de salvar */
+form .btn-info {
+    background-color: var(--terracota);
+    border-color: var(--terracota);
+    color: var(--branco);
+    border-radius: 8px;
+}
+
+form .btn-info:hover {
+    background-color: var(--cafe);
+    border-color: var(--cafe);
+    color: var(--branco);
+}
+/* Área dos formulários */
+main form {
+    background-color: var(--branco);
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(73, 55, 45, 0.08);
+}
+/* Campos dos formulários */
+main form .form-control {
+    min-height: 42px;
+    margin-top: 5px;
+}
+
+/* Efeito ao selecionar um campo */
+main form .form-control:focus {
+    border-color: var(--terracota);
+    box-shadow: 0 0 0 3px rgba(201, 111, 74, 0.15);
+}
+/* Botões dos formulários */
+main form .btn {
+    padding: 9px 20px;
+    font-weight: 600;
+    margin-right: 6px;
+    transition: 0.2s;
+}
+
+main form .btn:hover {
+    transform: translateY(-1px);
+}
+/* Botão de alteração de tema */
+.bd-mode-toggle .btn-bd-primary {
+    background-color: var(--terracota);
+    border-color: var(--terracota);
+    color: var(--branco);
+}
+
+.bd-mode-toggle .btn-bd-primary:hover {
+    background-color: var(--cafe);
+    border-color: var(--cafe);
+}
+/* Títulos das páginas */
+main h1 {
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+/* Linha abaixo do título */
+main .border-bottom {
+    border-color: #DDC9B8 !important;
+}
+/* Mensagens do sistema */
+.alert {
+    border: none;
+    border-radius: 10px;
+    padding: 14px 18px;
+}
+
+/* Mensagem de sucesso */
+.alert-success {
+    background-color: #E3EBDD;
+    color: #486044;
+}
+
+/* Mensagem de erro */
+.alert-danger {
+    background-color: #F5DED5;
+    color: #873F2B;
+}
+
+/* Mensagem de atenção */
+.alert-warning {
+    background-color: #F7EBCB;
+    color: #765719;
+}
+/* Links do conteúdo */
+main a:not(.btn) {
+    color: var(--terracota);
+    text-decoration: none;
+}
+
+main a:not(.btn):hover {
+    color: var(--cafe);
+    text-decoration: underline;
+}
+/* Cartões da página inicial */
+.card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(73, 55, 45, 0.14);
+}
+
+.card-title {
+    color: var(--cafe);
+    font-weight: 700;
+}
+/* Rodapé */
+footer {
+    color: var(--cafe);
+    border-top: 1px solid #DDC9B8;
+    padding: 15px 0;
+    margin-top: 30px;
+    text-align: center;
+}
