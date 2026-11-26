@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <meta name="theme-color" content="#712cf9" />
     <link href="../../css/dashboard.css" rel="stylesheet" />
+    <link href="../../css/style.css" rel="stylesheet" />
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -294,7 +295,7 @@
       <a
         class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white"
         href="#"
-        >Company name</a
+        >Cafeteria</a
       >
       <ul class="navbar-nav flex-row d-md-none">
         <li class="nav-item text-nowrap">
@@ -350,7 +351,7 @@
           >
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="sidebarMenuLabel">
-                Company name
+                Cafeteria
               </h5>
               <button
                 type="button"
@@ -373,7 +374,9 @@
             
           </div>
           <p>
-            <a href="create.php">Novo Cliente</a>
+            <a href="create.php" class="btn btn-primary">
+              <i class="bi bi-plus-circle"></i> Novo Cliente
+            </a>
           </p>
           
           <div class="table-responsive small">
@@ -392,8 +395,12 @@
                         <td><?= $cliente->getCpf_Cliente() ?></td>
                         <td><?= $cliente->getEndereco() ?></td>
                         <td>
-                          <a title="Editar" href="edit.php?id=<?= $cliente->getIdCliente() ?>"><i class="bi bi-pencil-fill"></i></a>
-                          <a title="Excluir" class="link-danger" href="destroy.php?id=<?= $cliente->getIdCliente() ?>"><i class="bi bi-trash3-fill"></i></a>
+                          <a title="Editar" class="btn btn-sm btn-warning" href="edit.php?id=<?= $cliente->getIdCliente() ?>">
+                           <i class="bi bi-pencil-fill"></i>
+                          </a>
+                          <a title="Excluir" class="btn btn-sm btn-danger" href="destroy.php?id=<?= $cliente->getIdCliente() ?>">
+                           <i class="bi bi-trash3-fill"></i>
+                          </a>
                         </td>
                     </tr>
                 <?php endforeach ?>
