@@ -18,6 +18,7 @@
     <link href="../../css/bootstrap.min.css" rel="stylesheet" />
     <meta name="theme-color" content="#712cf9" />
     <link href="../../css/dashboard.css" rel="stylesheet" />
+    <link href="../../css/style.css" rel="stylesheet" />
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -34,7 +35,7 @@
       .b-example-divider {
         width: 100%;
         height: 3rem;
-        background-color: #0000001a;
+        background-color: #14030325;
         border: solid rgba(0, 0, 0, 0.15);
         border-width: 1px 0;
         box-shadow:
@@ -284,7 +285,7 @@
       <a
         class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white"
         href="#"
-        >Company name</a
+        >Cafeteria</a
       >
       <ul class="navbar-nav flex-row d-md-none">
         <li class="nav-item text-nowrap">
@@ -340,7 +341,7 @@
           >
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="sidebarMenuLabel">
-                Company name
+                Cafeteria
               </h5>
               <button
                 type="button"
@@ -359,20 +360,38 @@
           <div
             class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
           >
-            <h1 class="h2">CRUD: Locadora</h1>
+            <h1 class="h2">CRUD: Cafeteria</h1>
             
           </div>
           
           <div class="table-responsive small">
             <p>
-              Sistema Orientado a Objetos que faz um CRUD de 
-              uma locadora como demonstração para a turma de INF 4 
-              do ano de 2026. 
+              Gerencie os produtos, clientes, funcionários e pedidos da cafeteria
+              em um só lugar.
             </p>
             <p>
               O Sistema está sendo desenvolvido seguindo o padrão 
               DAO (Data Access Object.)
             </p>
+            <div class="row g-4 mt-2">
+
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="bi bi-people-fill"></i> Clientes
+                        </h5>
+                        <p class="card-text">
+                            Consulte e gerencie os clientes cadastrados.
+                        </p>
+                        <a href="../cliente/" class="btn btn-primary">
+                            Acessar
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
           </div>
         </main>
       </div>
