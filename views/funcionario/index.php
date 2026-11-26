@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <meta name="theme-color" content="#712cf9" />
     <link href="../../css/dashboard.css" rel="stylesheet" />
+    <link href="../../css/style.css" rel="stylesheet" />
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
